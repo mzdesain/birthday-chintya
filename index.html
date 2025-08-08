@@ -287,7 +287,8 @@
         <button id="musicToggle" class="music-player text-pink-600 p-3 rounded-full" title="Toggle Music">
             <span class="text-lg">🎵</span>
         </button>
-        <audio id="backgroundMusic" loop>
+        <audio id="backgroundMusic" loop preload="auto">
+            <source src="https://drive.google.com/uc?export=download&id=1Jl-sTsQ5vX7FYTW-27TyXExdGGD8M5x6" type="audio/mpeg">
             <source src="https://docs.google.com/uc?export=download&id=1Jl-sTsQ5vX7FYTW-27TyXExdGGD8M5x6" type="audio/mpeg">
         </audio>
     </div>
@@ -534,18 +535,34 @@
         const musicToggle = document.getElementById('musicToggle');
         const backgroundMusic = document.getElementById('backgroundMusic');
         let isPlaying = false;
+        let musicLoaded = false;
+
+        // Set volume
+        backgroundMusic.volume = 0.5;
 
         musicToggle.addEventListener('click', function() {
             if (isPlaying) {
                 backgroundMusic.pause();
                 musicToggle.innerHTML = '<span class="text-xl">🎵</span>';
                 isPlaying = false;
+                showNotification('Musik dijeda 🎵');
             } else {
-                backgroundMusic.play().catch(e => {
-                    showNotification('Tambahkan URL musik untuk memutar musik latar! 🎵');
+                backgroundMusic.play().then(() => {
+                    musicToggle.innerHTML = '<span class="text-xl">🎶</span>';
+                    isPlaying = true;
+                    musicLoaded = true;
+                    showNotification('Musik latar sedang diputar! 🎵💕');
+                }).catch(e => {
+                    console.log('Music play error:', e);
+                    showNotification('Mohon tunggu, musik sedang dimuat... 🎵');
+                    // Try alternative approach
+                    setTimeout(() => {
+                        backgroundMusic.load();
+                        backgroundMusic.play().catch(() => {
+                            showNotification('Klik tombol musik lagi untuk mencoba! 🎵');
+                        });
+                    }, 1000);
                 });
-                musicToggle.innerHTML = '<span class="text-xl">🎶</span>';
-                isPlaying = true;
             }
         });
 
@@ -647,13 +664,48 @@
         // Auto-play music on first interaction
         let firstInteraction = true;
         document.addEventListener('click', function() {
-            if (firstInteraction && backgroundMusic.src) {
-                backgroundMusic.play().catch(() => {});
-                isPlaying = true;
-                musicToggle.innerHTML = '<span class="text-xl">🎶</span>';
+            if (firstInteraction && !musicLoaded) {
+                // Try to start music on first click
+                backgroundMusic.play().then(() => {
+                    isPlaying = true;
+                    musicLoaded = true;
+                    musicToggle.innerHTML = '<span class="text-xl">🎶</span>';
+                    showNotification('Musik latar dimulai! Selamat datang! 🎵💖');
+                }).catch(e => {
+                    console.log('Auto-play failed:', e);
+                    showNotification('Klik tombol 🎵 untuk memulai musik! 💕');
+                });
                 firstInteraction = false;
             }
         }, { once: true });
+
+        // Music loading events
+        backgroundMusic.addEventListener('loadstart', function() {
+            console.log('Music loading started...');
+        });
+
+        backgroundMusic.addEventListener('canplay', function() {
+            console.log('Music can start playing');
+            musicLoaded = true;
+        });
+
+        backgroundMusic.addEventListener('canplaythrough', function() {
+            console.log('Music loaded successfully');
+            musicLoaded = true;
+        });
+
+        backgroundMusic.addEventListener('error', function(e) {
+            console.log('Music loading error:', e);
+            showNotification('File musik tidak dapat dimuat. Coba refresh halaman! 🎵');
+        });
+
+        backgroundMusic.addEventListener('stalled', function() {
+            console.log('Music loading stalled');
+            showNotification('Musik sedang dimuat... Mohon tunggu! 🎵');
+        });
+
+        // Preload music
+        backgroundMusic.load();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96bafce6d44740d9',t:'MTc1NDYxMzg5NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96bb04f9f6e849fc',t:'MTc1NDYxNDIyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
