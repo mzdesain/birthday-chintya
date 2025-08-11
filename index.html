@@ -287,9 +287,14 @@
         <button id="musicToggle" class="music-player text-pink-600 p-3 rounded-full" title="Toggle Music">
             <span class="text-lg">🎵</span>
         </button>
-        <audio id="backgroundMusic" loop preload="auto">
-            <source src="https://drive.google.com/uc?export=download&id=1Jl-sTsQ5vX7FYTW-27TyXExdGGD8M5x6" type="audio/mpeg">
-            <source src="https://docs.google.com/uc?export=download&id=1Jl-sTsQ5vX7FYTW-27TyXExdGGD8M5x6" type="audio/mpeg">
+        <!-- ================================================================= -->
+        <!-- BAGIAN AUDIO YANG DIPERBAIKI                                      -->
+        <!-- Ganti src ini dengan link LANGSUNG ke file .mp3 milikmu         -->
+        <!-- ================================================================= -->
+        <audio id="backgroundMusic" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            <!-- Browser akan mencoba link di atas dulu. Jika gagal, ia akan mencoba link di bawah (jika ada). -->
+            <!-- Pastikan link kamu adalah link langsung ke file audio. -->
         </audio>
     </div>
 
@@ -299,7 +304,7 @@
             <div class="bounce-gentle text-5xl mb-4">👑</div>
             <h1 class="pacifico text-4xl sparkle-text mb-3">Chintya</h1>
             <div class="dancing text-2xl text-pink-600 mb-2 font-semibold">Sweet Seventeen</div>
-            <div class="text-pink-500 text-sm font-light leading-relaxed px-2">Celebrating another year of beauty & elegance</div>
+            <div class="text-pink-500 text-sm font-light leading-relaxed px-2">Merayakan satu tahun lagi penuh keindahan & keanggunan</div>
             <div class="flex justify-center space-x-3 mt-4">
                 <span class="text-pink-400 text-2xl bounce-gentle">🌸</span>
                 <span class="text-pink-500 text-2xl bounce-gentle" style="animation-delay: 0.2s;">💎</span>
@@ -310,24 +315,24 @@
         <!-- Countdown -->
         <div class="girly-card rounded-2xl p-4 fade-in-up">
             <h2 class="dancing text-2xl font-bold text-pink-600 text-center mb-4">
-                ⏰ Countdown to Magic
+                ⏰ Hitung Mundur Keajaiban
             </h2>
             <div id="countdown" class="grid grid-cols-4 gap-2">
                 <div class="countdown-box rounded-xl p-3 text-center">
                     <div id="days" class="text-xl font-bold text-pink-600 poppins">00</div>
-                    <div class="text-xs text-pink-400 font-medium">Days</div>
+                    <div class="text-xs text-pink-400 font-medium">Hari</div>
                 </div>
                 <div class="countdown-box rounded-xl p-3 text-center">
                     <div id="hours" class="text-xl font-bold text-pink-600 poppins">00</div>
-                    <div class="text-xs text-pink-400 font-medium">Hours</div>
+                    <div class="text-xs text-pink-400 font-medium">Jam</div>
                 </div>
                 <div class="countdown-box rounded-xl p-3 text-center">
                     <div id="minutes" class="text-xl font-bold text-pink-600 poppins">00</div>
-                    <div class="text-xs text-pink-400 font-medium">Minutes</div>
+                    <div class="text-xs text-pink-400 font-medium">Menit</div>
                 </div>
                 <div class="countdown-box rounded-xl p-3 text-center">
                     <div id="seconds" class="text-xl font-bold text-pink-600 poppins">00</div>
-                    <div class="text-xs text-pink-400 font-medium">Seconds</div>
+                    <div class="text-xs text-pink-400 font-medium">Detik</div>
                 </div>
             </div>
         </div>
@@ -336,7 +341,7 @@
         <div class="girly-card rounded-2xl p-5 text-center fade-in-up">
             <div class="text-4xl mb-4 bounce-gentle">🌺</div>
             <blockquote class="caveat text-lg text-pink-700 leading-relaxed mb-3 font-medium px-2">
-                "Life is a beautiful journey, and every birthday is a new chapter filled with dreams, love, and endless possibilities."
+                "Hidup adalah perjalanan yang indah, dan setiap ulang tahun adalah bab baru yang penuh dengan mimpi, cinta, dan kemungkinan tak terbatas."
             </blockquote>
             <div class="w-16 h-1 bg-gradient-to-r from-pink-300 to-pink-500 mx-auto rounded-full"></div>
         </div>
@@ -344,8 +349,8 @@
         <!-- Invitation -->
         <div class="girly-card rounded-2xl p-5 text-center fade-in-up sparkle-effect">
             <p class="text-pink-600 text-sm leading-relaxed mb-4 font-medium px-2">
-                You are warmly invited to celebrate this special moment with me! 
-                Let's create beautiful memories together on this magical day! ✨
+                Kamu diundang dengan hangat untuk merayakan momen istimewa ini bersamaku! 
+                Mari kita ciptakan kenangan indah bersama di hari yang ajaib ini! ✨
             </p>
             <div class="flex justify-center space-x-4">
                 <span class="text-pink-400 text-3xl bounce-gentle">🎂</span>
@@ -357,7 +362,7 @@
         <!-- Event Details -->
         <div class="girly-card rounded-2xl p-4 fade-in-up">
             <h2 class="dancing text-2xl font-bold text-pink-600 text-center mb-5">
-                Party Details
+                Detail Pesta
             </h2>
             
             <div class="space-y-3">
@@ -366,8 +371,8 @@
                         <span class="text-white text-lg">📅</span>
                     </div>
                     <div>
-                        <div class="font-semibold text-pink-700 text-xs">Date</div>
-                        <div class="text-pink-600 font-bold text-base">August 16, 2025</div>
+                        <div class="font-semibold text-pink-700 text-xs">Tanggal</div>
+                        <div class="text-pink-600 font-bold text-base">16 Agustus 2025</div>
                     </div>
                 </div>
                 
@@ -376,9 +381,9 @@
                         <span class="text-white text-lg">⏰</span>
                     </div>
                     <div>
-                        <div class="font-semibold text-pink-700 text-xs">Time</div>
-                        <div class="text-pink-600 font-bold text-base">6:30 PM - onwards</div>
-                        <div class="text-xs text-pink-400">Please arrive on time!</div>
+                        <div class="font-semibold text-pink-700 text-xs">Waktu</div>
+                        <div class="text-pink-600 font-bold text-base">18:30 - selesai</div>
+                        <div class="text-xs text-pink-400">Mohon datang tepat waktu!</div>
                     </div>
                 </div>
                 
@@ -387,7 +392,7 @@
                         <span class="text-white text-lg">📍</span>
                     </div>
                     <div>
-                        <div class="font-semibold text-pink-700 text-xs">Venue</div>
+                        <div class="font-semibold text-pink-700 text-xs">Tempat</div>
                         <div class="text-pink-600 font-bold text-base">Grand Town Hotel</div>
                         <div class="text-sm text-pink-500">Makassar</div>
                     </div>
@@ -403,11 +408,11 @@
                     <div class="ml-13 space-y-2">
                         <div class="flex items-center bg-white/60 rounded-lg p-2 border border-pink-200">
                             <div class="w-3 h-3 bg-gradient-to-r from-yellow-100 to-white rounded-full mr-2 border border-pink-300"></div>
-                            <span class="text-pink-600 font-medium text-sm">Ladies: Cream or White</span>
+                            <span class="text-pink-600 font-medium text-sm">Wanita: Putih</span>
                         </div>
                         <div class="flex items-center bg-white/60 rounded-lg p-2 border border-pink-200">
                             <div class="w-3 h-3 bg-gray-800 rounded-full mr-2 border border-gray-600"></div>
-                            <span class="text-pink-600 font-medium text-sm">Gentlemen: Black</span>
+                            <span class="text-pink-600 font-medium text-sm">Pria: Hitam</span>
                         </div>
                     </div>
                 </div>
@@ -417,22 +422,22 @@
         <!-- Comments Section -->
         <div class="girly-card rounded-2xl p-4 fade-in-up">
             <h2 class="dancing text-2xl font-bold text-pink-600 text-center mb-5">
-                💌 Sweet Messages
+                💌 Pesan Manis
             </h2>
             
             <!-- Comment Form -->
             <div class="bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl p-4 mb-4">
                 <div class="space-y-3">
-                    <input type="text" id="userName" placeholder="Your beautiful name..." class="w-full p-3 rounded-lg border-2 border-pink-200 focus:border-pink-400 focus:outline-none bg-white/80 text-pink-700 placeholder-pink-400 text-sm">
-                    <textarea id="userComment" placeholder="Share your sweet wishes..." class="w-full p-3 rounded-lg border-2 border-pink-200 focus:border-pink-400 focus:outline-none resize-none bg-white/80 text-pink-700 placeholder-pink-400 text-sm" rows="3"></textarea>
+                    <input type="text" id="userName" placeholder="Nama cantikmu..." class="w-full p-3 rounded-lg border-2 border-pink-200 focus:border-pink-400 focus:outline-none bg-white/80 text-pink-700 placeholder-pink-400 text-sm">
+                    <textarea id="userComment" placeholder="Bagikan ucapan manismu..." class="w-full p-3 rounded-lg border-2 border-pink-200 focus:border-pink-400 focus:outline-none resize-none bg-white/80 text-pink-700 placeholder-pink-400 text-sm" rows="3"></textarea>
                     <div class="space-y-3">
                         <select id="attendanceStatus" class="w-full p-3 rounded-lg border-2 border-pink-200 focus:border-pink-400 focus:outline-none bg-white/80 text-pink-700 text-sm">
-                            <option value="hadir">✅ Yes, I'll be there!</option>
-                            <option value="tidak-hadir">❌ Sorry, can't make it</option>
-                            <option value="mungkin">🤔 Maybe, not sure yet</option>
+                            <option value="hadir">✅ Ya, aku akan datang!</option>
+                            <option value="tidak-hadir">❌ Maaf, tidak bisa hadir</option>
+                            <option value="mungkin">🤔 Mungkin, belum yakin</option>
                         </select>
                         <button id="submitComment" class="sweet-btn text-white py-3 px-6 rounded-lg font-semibold w-full text-sm">
-                            Send Love 💕
+                            Kirim Cinta 💕
                         </button>
                     </div>
                 </div>
@@ -440,54 +445,24 @@
 
             <!-- Comments Display -->
             <div id="commentsContainer" class="space-y-3">
-                <div class="comment-bubble p-3">
-                    <div class="flex items-start space-x-3">
-                        <div class="w-10 h-10 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                            A
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center space-x-2 mb-1">
-                                <span class="font-semibold text-pink-600 text-sm">Alicia</span>
-                                <span class="text-green-500 text-xs">✅ Attending</span>
-                                <span class="text-pink-400 text-xs">2 minutes ago</span>
-                            </div>
-                            <p class="text-pink-700 text-xs leading-relaxed">Happy birthday beautiful! Can't wait to celebrate with you! 🎉💕</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comment-bubble p-3">
-                    <div class="flex items-start space-x-3">
-                        <div class="w-10 h-10 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                            M
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center space-x-2 mb-1">
-                                <span class="font-semibold text-pink-600 text-sm">Maya</span>
-                                <span class="text-green-500 text-xs">✅ Attending</span>
-                                <span class="text-pink-400 text-xs">5 minutes ago</span>
-                            </div>
-                            <p class="text-pink-700 text-xs leading-relaxed">Sweet seventeen! You're going to look absolutely stunning! 👑✨</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Komentar akan dimuat di sini secara dinamis -->
             </div>
         </div>
 
         <!-- RSVP Button -->
         <div class="girly-card rounded-2xl p-5 text-center fade-in-up">
             <button id="rsvpButton" class="sweet-btn text-white py-4 px-8 rounded-xl font-semibold text-base w-full mb-3">
-                💖 Confirm Attendance
+                💖 Konfirmasi Kehadiran
             </button>
             <p class="text-pink-500 text-sm">
-                Let me know if you're coming! 🌸
+                Beri tahu aku kalau kamu datang! 🌸
             </p>
         </div>
 
         <!-- Footer -->
         <div class="girly-card rounded-2xl p-5 text-center fade-in-up sparkle-effect">
             <div class="caveat text-xl text-pink-600 mb-2">
-                With love from
+                Dengan cinta dari
             </div>
             <div class="text-pink-500 font-bold text-xl sparkle-text pacifico">
                 Chintya 💖
@@ -506,7 +481,34 @@
         <div class="h-16"></div>
     </div>
 
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
     <script>
+        // =================================================================
+        // KONFIGURASI FIREBASE ANDA (SUDAH TERPASANG)
+        // =================================================================
+        const firebaseConfig = {
+            apiKey: "AIzaSyBb7ILx0FzK8YJyfdPX0YBPqruDuaLjExI",
+            authDomain: "birtday-chintya.firebaseapp.com",
+            databaseURL: "https://birtday-chintya-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "birtday-chintya",
+            storageBucket: "birtday-chintya.appspot.com",
+            messagingSenderId: "866272620804",
+            appId: "1:866272620804:web:9aea828a7b869b59172051",
+            measurementId: "G-60VNC62YLX"
+        };
+
+        // Inisialisasi Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+        const commentsRef = database.ref('comments');
+
+        // =================================================================
+        // KODE LAINNYA (TIDAK DIUBAH)
+        // =================================================================
+
         // Countdown Timer
         function updateCountdown() {
             const eventDate = new Date('2025-08-16T18:30:00').getTime();
@@ -518,16 +520,17 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById('days').textContent = days.toString().padStart(2, '0');
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            if (document.getElementById('days')) {
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }
 
             if (distance < 0) {
-                document.getElementById('countdown').innerHTML = '<div class="text-center text-pink-600 text-xl font-bold col-span-4 dancing">🎉 Party Time! 🎉</div>';
+                document.getElementById('countdown').innerHTML = '<div class="text-center text-pink-600 text-xl font-bold col-span-4 dancing">🎉 Saatnya Pesta! 🎉</div>';
             }
         }
-
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
@@ -535,92 +538,144 @@
         const musicToggle = document.getElementById('musicToggle');
         const backgroundMusic = document.getElementById('backgroundMusic');
         let isPlaying = false;
-        let musicLoaded = false;
-
-        // Set volume
-        backgroundMusic.volume = 0.5;
-
-        musicToggle.addEventListener('click', function() {
+        
+        function toggleMusic() {
             if (isPlaying) {
                 backgroundMusic.pause();
                 musicToggle.innerHTML = '<span class="text-xl">🎵</span>';
                 isPlaying = false;
-                showNotification('Music paused 🎵');
             } else {
+                // .play() mengembalikan Promise, yang bisa gagal jika user belum berinteraksi
                 backgroundMusic.play().then(() => {
                     musicToggle.innerHTML = '<span class="text-xl">🎶</span>';
                     isPlaying = true;
-                    musicLoaded = true;
-                    showNotification('Background music is playing! 🎵💕');
-                }).catch(e => {
-                    console.log('Music play error:', e);
-                    showNotification('Please wait, music is loading... 🎵');
-                    // Try alternative approach
-                    setTimeout(() => {
-                        backgroundMusic.load();
-                        backgroundMusic.play().catch(() => {
-                            showNotification('Click the music button again to try! 🎵');
-                        });
-                    }, 1000);
+                }).catch(error => {
+                    console.log('Gagal memutar musik secara otomatis, menunggu interaksi user.', error);
+                    // Tidak perlu notifikasi di sini karena akan ditangani oleh interaksi pertama
                 });
             }
-        });
+        }
 
-        // Comments System
+        musicToggle.addEventListener('click', toggleMusic);
+
+        // =================================================================
+        // BAGIAN KOMENTAR YANG TERHUBUNG DENGAN FIREBASE
+        // =================================================================
+
         const submitComment = document.getElementById('submitComment');
         const commentsContainer = document.getElementById('commentsContainer');
 
+        // Fungsi untuk mengirim komentar ke Firebase
         submitComment.addEventListener('click', function() {
             const userName = document.getElementById('userName').value.trim();
             const userComment = document.getElementById('userComment').value.trim();
             const attendanceStatus = document.getElementById('attendanceStatus').value;
 
             if (!userName || !userComment) {
-                showNotification('Please fill in your name and message! 💕');
+                showNotification('Mohon isi nama dan pesan kamu! 💕');
                 return;
             }
 
-            const statusText = {
-                'hadir': '✅ Attending',
-                'tidak-hadir': '❌ Not attending',
-                'mungkin': '🤔 Maybe'
+            const newCommentData = {
+                name: userName,
+                comment: userComment,
+                status: attendanceStatus,
+                timestamp: firebase.database.ServerValue.TIMESTAMP
             };
 
-            const colors = ['from-pink-400 to-pink-600', 'from-purple-400 to-pink-500', 'from-pink-300 to-pink-500', 'from-rose-400 to-pink-600'];
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            commentsRef.push(newCommentData).then(() => {
+                showNotification('Pesan manismu sudah terkirim! 💖');
+                document.getElementById('userName').value = '';
+                document.getElementById('userComment').value = '';
+                document.getElementById('attendanceStatus').value = 'hadir';
+            }).catch(error => {
+                console.error("Error sending comment: ", error);
+                showNotification('Gagal mengirim pesan. Coba lagi.');
+            });
+        });
 
-            const newComment = document.createElement('div');
-            newComment.className = 'comment-bubble p-3 fade-in-up';
-            newComment.innerHTML = `
+        // Fungsi untuk memuat dan menampilkan komentar dari Firebase
+        function loadComments() {
+            commentsRef.orderByChild('timestamp').on('value', (snapshot) => {
+                commentsContainer.innerHTML = ''; 
+                if (!snapshot.exists()) {
+                    commentsContainer.innerHTML = `<div class="text-center text-pink-500 text-sm p-4">Jadilah yang pertama mengirim pesan manis! 💖</div>`;
+                } else {
+                    let commentsArray = [];
+                    snapshot.forEach((childSnapshot) => {
+                        commentsArray.push(childSnapshot.val());
+                    });
+                    commentsArray.reverse().forEach((data) => {
+                        displayComment(data);
+                    });
+                }
+            });
+        }
+
+        // Fungsi untuk membuat elemen HTML dari setiap data komentar
+        function displayComment(data) {
+            const statusInfo = {
+                'hadir': { text: '✅ Hadir', color: 'text-green-500' },
+                'tidak-hadir': { text: '❌ Tidak hadir', color: 'text-red-500' },
+                'mungkin': { text: '🤔 Mungkin', color: 'text-yellow-600' }
+            };
+
+            const status = statusInfo[data.status] || { text: '', color: '' };
+            const colors = ['from-pink-400 to-pink-600', 'from-purple-400 to-pink-500', 'from-pink-300 to-pink-500', 'from-rose-400 to-pink-600'];
+            const colorIndex = data.name.charCodeAt(0) % colors.length;
+            const randomColor = colors[colorIndex];
+
+            const commentElement = document.createElement('div');
+            commentElement.className = 'comment-bubble p-3 fade-in-up';
+            commentElement.innerHTML = `
                 <div class="flex items-start space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-br ${randomColor} rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        ${userName.charAt(0).toUpperCase()}
+                    <div class="w-10 h-10 bg-gradient-to-br ${randomColor} rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        ${data.name.charAt(0).toUpperCase()}
                     </div>
-                    <div class="flex-1">
-                        <div class="flex items-center space-x-2 mb-1">
-                            <span class="font-semibold text-pink-600 text-sm">${userName}</span>
-                            <span class="text-xs">${statusText[attendanceStatus]}</span>
-                            <span class="text-pink-400 text-xs">Baru saja</span>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center flex-wrap space-x-2 mb-1">
+                            <span class="font-semibold text-pink-600 text-sm truncate">${data.name}</span>
+                            <span class="text-xs ${status.color} font-medium">${status.text}</span>
+                            <span class="text-pink-400 text-xs">${timeAgo(data.timestamp)}</span>
                         </div>
-                        <p class="text-pink-700 text-xs leading-relaxed">${userComment}</p>
+                        <p class="text-pink-700 text-xs leading-relaxed break-words">${data.comment}</p>
                     </div>
                 </div>
             `;
+            commentsContainer.appendChild(commentElement);
+        }
 
-            commentsContainer.insertBefore(newComment, commentsContainer.firstChild);
+        // Fungsi untuk mengubah timestamp menjadi format "sekian waktu lalu"
+        function timeAgo(timestamp) {
+            const now = new Date().getTime();
+            const seconds = Math.floor((now - timestamp) / 1000);
+            if (seconds < 2) return "Baru saja";
+            if (seconds < 60) return `${Math.floor(seconds)} detik lalu`;
+            let interval = seconds / 31536000;
+            if (interval > 1) return Math.floor(interval) + " tahun lalu";
+            interval = seconds / 2592000;
+            if (interval > 1) return Math.floor(interval) + " bulan lalu";
+            interval = seconds / 86400;
+            if (interval > 1) return Math.floor(interval) + " hari lalu";
+            interval = seconds / 3600;
+            if (interval > 1) return Math.floor(interval) + " jam lalu";
+            interval = seconds / 60;
+            if (interval > 1) return Math.floor(interval) + " menit lalu";
+            return "Baru saja";
+        }
 
-            // Clear form
-            document.getElementById('userName').value = '';
-            document.getElementById('userComment').value = '';
-            document.getElementById('attendanceStatus').value = 'hadir';
+        // Memuat komentar saat halaman pertama kali dibuka
+        loadComments();
 
-            showNotification('Pesan manismu sudah terkirim! 💖');
-        });
+        // =================================================================
+        // KODE LAINNYA (TIDAK DIUBAH)
+        // =================================================================
 
         // RSVP Button
         document.getElementById('rsvpButton').addEventListener('click', function() {
-            document.getElementById('userName').focus();
-            document.getElementById('userName').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const commentSection = document.getElementById('userName');
+            commentSection.focus();
+            commentSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
 
         // Sparkle Effects on Click
@@ -633,7 +688,6 @@
         function createSparkleEffect(x, y) {
             const sparkles = ['✨', '💫', '🌟', '💖', '🌸'];
             const colors = ['text-pink-400', 'text-pink-500', 'text-pink-300', 'text-rose-400'];
-            
             for (let i = 0; i < 3; i++) {
                 const sparkle = document.createElement('div');
                 sparkle.innerHTML = sparkles[Math.floor(Math.random() * sparkles.length)];
@@ -642,14 +696,14 @@
                 sparkle.style.top = (y - 10 + Math.random() * 20) + 'px';
                 sparkle.style.animation = 'fadeInUp 1s ease-out';
                 document.body.appendChild(sparkle);
-                
                 setTimeout(() => sparkle.remove(), 1000);
             }
         }
 
+        // Fungsi notifikasi
         function showNotification(message) {
             const notification = document.createElement('div');
-            notification.className = 'fixed top-24 left-4 right-4 girly-card text-pink-600 p-4 rounded-2xl shadow-2xl z-50 fade-in-up text-center';
+            notification.className = 'fixed top-24 left-1/2 -translate-x-1/2 w-11/12 max-w-sm girly-card text-pink-600 p-4 rounded-2xl shadow-2xl z-50 fade-in-up text-center';
             notification.innerHTML = `
                 <div class="flex items-center justify-center space-x-2">
                     <span class="text-lg">💕</span>
@@ -657,55 +711,26 @@
                 </div>
             `;
             document.body.appendChild(notification);
-            
             setTimeout(() => notification.remove(), 3000);
         }
 
-        // Auto-play music on first interaction
-        let firstInteraction = true;
-        document.addEventListener('click', function() {
-            if (firstInteraction && !musicLoaded) {
-                // Try to start music on first click
-                backgroundMusic.play().then(() => {
-                    isPlaying = true;
-                    musicLoaded = true;
-                    musicToggle.innerHTML = '<span class="text-xl">🎶</span>';
-                    showNotification('Musik latar dimulai! Selamat datang! 🎵💖');
-                }).catch(e => {
-                    console.log('Auto-play failed:', e);
-                    showNotification('Klik tombol 🎵 untuk memulai musik! 💕');
-                });
-                firstInteraction = false;
+        // Auto-play music on first user interaction
+        function playMusicOnFirstInteraction() {
+            if (!isPlaying) {
+                showNotification('Klik di mana saja untuk memulai musik 🎵');
+                document.body.addEventListener('click', () => {
+                    if (!isPlaying) { // Cek lagi untuk menghindari play ganda
+                        backgroundMusic.play();
+                        isPlaying = true;
+                        musicToggle.innerHTML = '<span class="text-xl">🎶</span>';
+                    }
+                }, { once: true }); // Hanya jalankan sekali
             }
-        }, { once: true });
+        }
+        
+        // Panggil fungsi untuk memutar musik setelah halaman dimuat
+        window.addEventListener('load', playMusicOnFirstInteraction);
 
-        // Music loading events
-        backgroundMusic.addEventListener('loadstart', function() {
-            console.log('Music loading started...');
-        });
-
-        backgroundMusic.addEventListener('canplay', function() {
-            console.log('Music can start playing');
-            musicLoaded = true;
-        });
-
-        backgroundMusic.addEventListener('canplaythrough', function() {
-            console.log('Music loaded successfully');
-            musicLoaded = true;
-        });
-
-        backgroundMusic.addEventListener('error', function(e) {
-            console.log('Music loading error:', e);
-            showNotification('File musik tidak dapat dimuat. Coba refresh halaman! 🎵');
-        });
-
-        backgroundMusic.addEventListener('stalled', function() {
-            console.log('Music loading stalled');
-            showNotification('Musik sedang dimuat... Mohon tunggu! 🎵');
-        });
-
-        // Preload music
-        backgroundMusic.load();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96bb2226d0fc9ccb',t:'MTc1NDYxNTQyMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
